@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard - English Vocabulary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 English Vocabulary Flashcard</h1>
+            <div class="stats">
+                <span>Score: <strong id="score">0</strong>/<strong id="total">19</strong></span>
+                <span>Progress: <strong id="current">1</strong>/19</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-container">
+                <img id="animalImage" src="" alt="Animal" class="animal-image">
+            </div>
+            
+            <div class="blanks">
+                <p id="blanksDisplay" style="font-size: 32px; letter-spacing: 12px; font-weight: bold; color: #667eea; cursor: text; min-height: 50px; display: flex; align-items: center; justify-content: center;" onclick="document.getElementById('answerInput').focus()"></p>
+                <input 
+                    type="text" 
+                    id="answerInput" 
+                    placeholder="" 
+                    autocomplete="off"
+                    style="opacity: 0; width: 0; height: 0; position: absolute; pointer-events: none;"
+                >
+            </div>
+
+            <div id="feedback" class="feedback hidden">
+                <p id="feedbackText"></p>
+            </div>
+
+            <div class="hint">
+                <p>💡 Hint: <strong id="hint"></strong></p>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button id="prevBtn" class="nav-btn">← ก่อนหน้า</button>
+            <button id="nextBtn" class="nav-btn">ถัดไป →</button>
+            <button id="resetBtn" class="reset-btn">🔄 เริ่มใหม่</button>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
