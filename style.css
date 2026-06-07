@@ -252,7 +252,8 @@ body {
 
     #blanksDisplay {
         font-size: 24px !important;
-        letter-spacing: 8px !important;
+        letter-spacing: 6px !important;
+        font-family: 'Courier New', monospace !important;
     }
 
     .hint {
@@ -327,8 +328,9 @@ body {
 
     #blanksDisplay {
         font-size: 20px !important;
-        letter-spacing: 6px !important;
+        letter-spacing: 4px !important;
         min-height: 40px;
+        font-family: 'Courier New', monospace !important;
     }
 
     .hint {
@@ -366,4 +368,5 @@ body {
 #blanksDisplay {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    font-family: 'Courier New', monospace;
 }
