@@ -214,22 +214,63 @@ body {
     transition: width 0.3s ease;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .container {
         padding: 20px;
+        border-radius: 15px;
     }
 
     .header h1 {
-        font-size: 24px;
+        font-size: 22px;
+        margin-bottom: 12px;
     }
 
     .stats {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 20px;
+        margin-bottom: 20px;
     }
 
     .image-container {
-        height: 250px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    #emojiDisplay {
+        font-size: 80px !important;
+    }
+
+    .blanks {
+        padding: 20px;
+        margin: 15px 0;
+    }
+
+    #blanksDisplay {
+        font-size: 24px !important;
+        letter-spacing: 8px !important;
+    }
+
+    .hint {
+        font-size: 12px;
+    }
+
+    #hint {
+        font-size: 14px;
+    }
+
+    .nav-btn, .reset-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .navigation {
+        gap: 8px;
+        margin-bottom: 15px;
     }
 
     .input-section {
@@ -238,5 +279,86 @@ body {
 
     .submit-btn {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .stats {
+        gap: 5px;
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .image-container {
+        height: 150px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+
+    #emojiDisplay {
+        font-size: 60px !important;
+    }
+
+    .blanks {
+        padding: 15px;
+        margin: 12px 0;
+        border-radius: 10px;
+        border: 1px solid #667eea;
+    }
+
+    #blanksDisplay {
+        font-size: 20px !important;
+        letter-spacing: 6px !important;
+        min-height: 40px;
+    }
+
+    .hint {
+        font-size: 11px;
+    }
+
+    #hint {
+        font-size: 12px;
+    }
+
+    .feedback {
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+
+    .nav-btn, .reset-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+
+    .navigation {
+        gap: 5px;
+        margin-bottom: 12px;
+    }
+
+    .progress-bar {
+        height: 6px;
+        margin-top: 15px;
     }
 }
