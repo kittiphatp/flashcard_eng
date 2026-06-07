@@ -92,17 +92,43 @@ function checkAnswer() {
 // Update blanks display
 function updateBlanksDisplay() {
     const input = document.getElementById('answerInput').value;
-    let display = '';
+    const container = document.getElementById('blanksDisplay');
+    container.innerHTML = '';
     
     for (let i = 0; i < currentWordLength; i++) {
+        const charBox = document.createElement('span');
+        charBox.className = 'char-box';
+        charBox.style.cssText = `
+            width: 35px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #667eea;
+            border-radius: 6px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+            cursor: pointer;
+            background: white;
+            font-family: 'Courier New', monospace;
+            user-select: none;
+            transition: all 0.2s ease;
+        `;
+        
         if (i < input.length) {
-            display += input[i];
+            charBox.textContent = input[i];
         } else {
-            display += '_';
+            charBox.textContent = '_';
         }
+        
+        charBox.addEventListener('click', () => {
+            document.getElementById('answerInput').focus();
+            document.getElementById('answerInput').setSelectionRange(i, i);
+        });
+        
+        container.appendChild(charBox);
     }
-    
-    document.getElementById('blanksDisplay').textContent = display;
 }
 
 // Show feedback

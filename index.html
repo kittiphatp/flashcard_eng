@@ -10,7 +10,7 @@
     <div class="container">
         <div class="header">
             <h1>📚 English Vocabulary Flashcard</h1>
-            <div class="version">v1.0</div>
+            <div class="version">v1.1</div>
             <div class="stats">
                 <span>Score: <strong id="score">0</strong>/<strong id="total">19</strong></span>
                 <span>Progress: <strong id="current">1</strong>/19</span>
@@ -23,7 +23,7 @@
             </div>
             
             <div class="blanks">
-                <p id="blanksDisplay" style="font-size: 32px; letter-spacing: 8px; font-weight: bold; color: #667eea; cursor: text; min-height: 50px; display: flex; align-items: center; justify-content: center; white-space: nowrap; overflow-x: auto; font-family: 'Courier New', monospace; direction: ltr; unicode-bidi: bidi-override;" onclick="document.getElementById('answerInput').focus()"></p>
+                <div id="blanksDisplay" class="blanks-container" style="display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; align-items: center;"></div>
                 <input 
                     type="text" 
                     id="answerInput" 
