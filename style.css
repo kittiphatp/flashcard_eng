@@ -362,3 +362,8 @@ body {
         margin-top: 15px;
     }
 }
+
+#blanksDisplay {
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
