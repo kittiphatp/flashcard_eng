@@ -100,9 +100,6 @@ function updateBlanksDisplay() {
         } else {
             display += '_';
         }
-        if (i < currentWordLength - 1) {
-            display += ' ';
-        }
     }
     
     document.getElementById('blanksDisplay').textContent = display;
