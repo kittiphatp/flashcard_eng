@@ -43,7 +43,14 @@ body {
 .header h1 {
     color: #667eea;
     font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.version {
+    font-size: 12px;
+    color: #999;
     margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .stats {
@@ -222,6 +229,11 @@ body {
 
     .header h1 {
         font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .version {
+        font-size: 11px;
         margin-bottom: 12px;
     }
 
@@ -254,6 +266,8 @@ body {
         font-size: 24px !important;
         letter-spacing: 6px !important;
         font-family: 'Courier New', monospace !important;
+        direction: ltr;
+        unicode-bidi: bidi-override;
     }
 
     .hint {
@@ -295,6 +309,11 @@ body {
 
     .header h1 {
         font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .version {
+        font-size: 10px;
         margin-bottom: 10px;
     }
 
@@ -331,6 +350,8 @@ body {
         letter-spacing: 4px !important;
         min-height: 40px;
         font-family: 'Courier New', monospace !important;
+        direction: ltr;
+        unicode-bidi: bidi-override;
     }
 
     .hint {
@@ -369,4 +390,6 @@ body {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     font-family: 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: bidi-override;
 }

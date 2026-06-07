@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #667eea;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 16px;
+    color: #666;
+}
+
+.card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.animal-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    animation: fadeIn 0.5s ease;
+}
+
+.blanks {
+    text-align: center;
+    margin: 20px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 2px solid #667eea;
+    animation: slideIn 0.3s ease;
+    cursor: text;
+    user-select: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.input-section {
+    display: none;
+}
+
+.submit-btn {
+    display: none;
+}
+
+.feedback {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.feedback.hidden {
+    display: none;
+}
+
+.feedback.correct {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #28a745;
+}
+
+.feedback.incorrect {
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+
+.hint {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+#hint {
+    color: #667eea;
+    font-size: 16px;
+}
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: #d0d0d0;
+}
+
+.nav-btn:disabled {
+    background: #f0f0f0;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.reset-btn {
+    padding: 10px 20px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.reset-btn:hover {
+    background: #6a3f96;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    #emojiDisplay {
+        font-size: 80px !important;
+    }
+
+    .blanks {
+        padding: 20px;
+        margin: 15px 0;
+    }
+
+    #blanksDisplay {
+        font-size: 24px !important;
+        letter-spacing: 6px !important;
+        font-family: 'Courier New', monospace !important;
+    }
+
+    .hint {
+        font-size: 12px;
+    }
+
+    #hint {
+        font-size: 14px;
+    }
+
+    .nav-btn, .reset-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .navigation {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .stats {
+        gap: 5px;
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .image-container {
+        height: 150px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+
+    #emojiDisplay {
+        font-size: 60px !important;
+    }
+
+    .blanks {
+        padding: 15px;
+        margin: 12px 0;
+        border-radius: 10px;
+        border: 1px solid #667eea;
+    }
+
+    #blanksDisplay {
+        font-size: 20px !important;
+        letter-spacing: 4px !important;
+        min-height: 40px;
+        font-family: 'Courier New', monospace !important;
+    }
+
+    .hint {
+        font-size: 11px;
+    }
+
+    #hint {
+        font-size: 12px;
+    }
+
+    .feedback {
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+
+    .nav-btn, .reset-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+
+    .navigation {
+        gap: 5px;
+        margin-bottom: 12px;
+    }
+
+    .progress-bar {
+        height: 6px;
+        margin-top: 15px;
+    }
+}
+
+#blanksDisplay {
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Courier New', monospace;
+}
